@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICPC（国際大学対抗プログラミングコンテスト）対策特設ページ | IQプログラミングサークル</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        background-color: #c0c0c0;
+        font-family: 'MS PGothic', 'Hiragino Kaku Gothic ProN', sans-serif;
+      }
+
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+      .blink {
+        animation: blink 1s infinite;
+      }
+      .win-panel {
+        border: 2px solid;
+        border-color: #ffffff #808080 #808080 #ffffff;
+      }
+      .memo-box {
+        background-color: #ffffe1;
+        border: 1px solid #000;
+        padding: 10px;
+        box-shadow: 2px 2px 0px #888;
+      }
+    </style>
+  </head>
+
+  <body class="text-black pb-10">
+    <header class="text-center py-10">
+      <div class="inline-block bg-white border-4 border-gray-500 shadow-[4px_4px_0_#888] px-8 py-4 text-left">
+        <h1 class="text-2xl font-bold text-blue-800 border-b-4 border-double border-blue-500 pb-2 text-center">
+          ICPC（国際大学対抗プログラミングコンテスト）対策特設ページ
+        </h1>
+        <p class="mt-3 text-sm text-center font-bold">
+          〜 チームで挑む世界最大のアルゴリズムバトル 〜<br />
+          正しいデータ構造の選択と計算量の見積もりをマスターせよ！
+        </p>
+        <p class="mt-2 blink text-blue-700 font-bold text-center">★ 1秒間の限界を見極め、時間内にACをもぎ取れ ★</p>
+      </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 space-y-10">
+      <section class="bg-white border-4 border-gray-400 shadow-[4px_4px_0_#888] p-6 text-left">
+        <h2 class="text-lg font-bold text-blue-900 bg-blue-100 border-l-4 border-blue-900 px-3 py-1 mb-4">
+          1. ICPCってなに？
+        </h2>
+        <p class="text-sm mb-4 leading-relaxed">
+          ICPCは、3人1組のチームでコンピュータを囲み、制限時間内にどれだけ多くの問題を解けるかを競う世界規模
+          の歴史あるコンテストです。<br />
+          <strong>どうやって実装して問題を解決するかや、計算量の正しい見積もりが大事なコンテストです！</strong>
+        </p>
+
+        <div class="memo-box mb-4">
+          <p class="font-bold text-sm text-blue-900 mb-2">順位付けのルール</p>
+          <p class="text-sm leading-relaxed">
+            基本的には<strong>「問題を早く、多く解いたチームの勝ち」</strong>です！具体的なタイブレークは以下の通りです。
+          </p>
+          <ul class="text-xs list-disc ml-5 mt-2 space-y-1">
+            <li><strong>正解数（AC数）：</strong> 多いチームが当然上位。</li>
+            <li>
+              <strong>ペナルティ（総経過時間）：</strong>
+              正解数が並んだ場合、各問題を正解するまでにかかった「経過時間の合計」に、正解するまでに犯した「誤答1回につき20分」を加算した値が<strong>少ない</strong>チームが上位になります。
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="bg-white border-4 border-gray-400 shadow-[4px_4px_0_#888] p-6 text-left">
+        <h2 class="text-lg font-bold text-blue-900 bg-blue-100 border-l-4 border-blue-900 px-3 py-1 mb-4">
+          2. まずは準備！過去問サイトへの登録
+        </h2>
+        <p class="text-sm mb-4">
+          ICPCの歴代過去問をジャッジ（自動採点）してくれるWebサイト「AOJ（Aizu Online
+          Judge）」のアカウントを作成し、過去問に挑戦できる状態を作りましょう！
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+          <div class="bg-gray-100 border-2 border-gray-400 p-3 win-panel flex flex-col justify-between">
+            <div>
+              <p class="font-bold text-sm text-blue-800 mb-1">① アカウント作成</p>
+              <p class="text-xs text-gray-600 mb-4">まずはここから。ジャッジを有効にするための第一歩です。</p>
+            </div>
+            <a
+              href="https://judge.u-aizu.ac.jp/onlinejudge/register.jsp"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block bg-blue-600 text-white text-xs px-3 py-2 font-bold win-panel shadow-[2px_2px_0_#000]"
+            >
+              AOJ新規登録を開く
+            </a>
+          </div>
+
+          <div class="bg-gray-100 border-2 border-gray-400 p-3 win-panel flex flex-col justify-between">
+            <div>
+              <p class="font-bold text-sm text-blue-800 mb-1">② 国内予選（学内選考）</p>
+              <p class="text-xs text-gray-600 mb-4">
+                今回主にメインで練習するのはこちら。日本語と英語を切り替えられます。
+              </p>
+            </div>
+            <a
+              href="https://onlinejudge.u-aizu.ac.jp/challenges/sources/ICPC/Prelim"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block bg-green-600 text-white text-xs px-3 py-2 font-bold win-panel shadow-[2px_2px_0_#000]"
+            >
+              国内予選の過去問
+            </a>
+          </div>
+
+          <div class="bg-gray-100 border-2 border-gray-400 p-3 win-panel flex flex-col justify-between">
+            <div>
+              <p class="font-bold text-sm text-blue-800 mb-1">③ アジア地区予選</p>
+              <p class="text-xs text-gray-600 mb-4">問題文は全て英語のみ。難易度は跳ね上がりますが腕試しに最適です。</p>
+            </div>
+            <a
+              href="https://onlinejudge.u-aizu.ac.jp/challenges/sources/ICPC/Regional"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block bg-red-600 text-white text-xs px-3 py-2 font-bold win-panel shadow-[2px_2px_0_#000]"
+            >
+              アジア予選の過去問
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white border-4 border-gray-400 shadow-[4px_4px_0_#888] p-6 text-left">
+        <h2 class="text-lg font-bold text-blue-900 bg-blue-100 border-l-4 border-blue-900 px-3 py-1 mb-4">
+          3. 学習の道標（コンテンツ一覧）
+        </h2>
+        <p class="text-sm mb-5">
+          ICPCを戦い抜くための肝要な知識を、以下の各章にて詳述しています。順を追って学習を進めてください。
+        </p>
+
+        <div class="space-y-4">
+          <a
+            href="./order.html"
+            class="block bg-gray-100 border-2 border-gray-400 p-4 win-panel hover:bg-gray-200 transition-colors"
+          >
+            <h3 class="font-bold text-blue-800 text-base mb-1">【Chapter 1】 計算量の見積もり</h3>
+            <p class="text-xs text-gray-700 leading-relaxed">
+              1秒間の限界を見極める。プログラムの実行時間を事前に予測し、TLE（時間切れ）を回避するための極意と、実践的なクイズに挑戦します。
+            </p>
+          </a>
+
+          <a
+            href="./overflow.html"
+            class="block bg-gray-100 border-2 border-gray-400 p-4 win-panel hover:bg-gray-200 transition-colors"
+          >
+            <h3 class="font-bold text-blue-800 text-base mb-1">【Chapter 2】 オーバーフローの恐怖</h3>
+            <p class="text-xs text-gray-700 leading-relaxed">
+              変数の型が抱える表現範囲の限界とは。沈黙のバグを引き起こすオーバーフロー現象のメカニズムと、未然に防ぐための安全策を学びます。
+            </p>
+          </a>
+
+          <a
+            href="./string.html"
+            class="block bg-gray-100 border-2 border-gray-400 p-4 win-panel hover:bg-gray-200 transition-colors"
+          >
+            <h3 class="font-bold text-blue-800 text-base mb-1">【Chapter 3】 文字列操作</h3>
+            <p class="text-xs text-gray-700 leading-relaxed">
+              C言語でICPCに挑戦する方向けに、文字列の操作方法と、効率的な文字列処理を実現するためのテクニックを習得します。
+            </p>
+          </a>
+          <a
+            href="./C17.html"
+            class="block bg-gray-100 border-2 border-gray-400 p-4 win-panel hover:bg-gray-200 transition-colors"
+          >
+            <h3 class="font-bold text-blue-800 text-base mb-1">【Chapter 4】 C17の新機能</h3>
+            <p class="text-xs text-gray-700 leading-relaxed">
+              授業内よりも新しいC言語、C17で導入された新しい機能を活用しよう。ICPCで役立つ最新の言語機能を紹介します。
+            </p>
+          </a>
+          <a
+            href="./lecture.html"
+            class="block bg-gray-100 border-2 border-gray-400 p-4 win-panel hover:bg-gray-200 transition-colors"
+          >
+            <h3 class="font-bold text-blue-800 text-base mb-1">【Chapter 5】 ICPC固有の実装作法</h3>
+            <p class="text-xs text-gray-700 leading-relaxed">
+              複数テストケースの連続処理や、ICPC特有の入力形式に対応するための実装テクニック、ICPCの基本的な考え方をレクチャーします。
+            </p>
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
